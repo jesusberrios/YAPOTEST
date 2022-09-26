@@ -1,0 +1,9 @@
+<div class="example-container">
+
+    <mat-form-field hintLabel="*Requerido" appearance="fill">
+      <mat-label>Ingrese su banda favorita</mat-label>
+      <input matInput required [(ngModel)]="artistName" [value]="artistName" (keydown.enter)="search(artistName)" placeholder="radiohead">
+    </mat-form-field>
+    
+    <button mat-raised-button color="primary" class="button" (click)="search(artistName)">Buscar</button>
+</div>
