@@ -1,0 +1,50 @@
+/searchTrack:
+  get:
+    description: 'searchTrack'
+    operationId: 'searchTrack'
+    produces:
+      - 'application/json'
+    tags:
+      - searchTrack
+    x-oai-middleware:
+      - file: controller
+        handler: searchTrack
+    parameters:
+      - in: header
+        name: name
+        type: string
+    responses:
+      200:
+        description: 'Operation successful'
+        schema:
+          $ref: '#/definitions/searchTrackResponse'
+      404:
+        description: 'Error operation'
+        schema:
+          $ref: '#/definitions/error'
+/favoritos:
+  post:
+    description: 'favoritos'
+    operationId: 'favoritos'
+    produces:
+      - 'application/json'
+    tags:
+      - addToFavorite
+    x-oai-middleware:
+      - file: controller
+        handler: addToFavorite
+    parameters:
+      - in: body
+        name: data
+        schema:
+          $ref: '#/definitions/addToFavoriteRequest'
+    responses:
+      200:
+        description: 'Operation successful'
+        schema:
+          $ref: '#/definitions/addToFavoriteResponse'
+      404:
+        description: 'Error operation'
+        schema:
+          $ref: '#/definitions/error'
+

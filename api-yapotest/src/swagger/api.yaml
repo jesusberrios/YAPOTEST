@@ -1,0 +1,27 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: YAPO TEST
+  description: >-
+    Servicio para obtener bandas y albums
+  contact:
+    name: jesusberrioscortez@gmail.com
+  license:
+    name: MIT
+basePath: /yapotest/v1
+schemes:
+  - http
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+definitions:
+#security:
+#  - api_key: []
+#securityDefinitions:
+#  api_key:
+#    type: "apiKey"
+#    name: "Authorization"
+#    in: "header"

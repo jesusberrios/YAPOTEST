@@ -1,0 +1,24 @@
+searchTrackResponse:
+  title: Response searchTrack
+  type: object
+  properties:
+    data:
+      type: object
+addToFavoriteRequest:
+  title: Request addToFavorite
+  type: object
+  properties:
+    nombre_banda:
+      type: string
+    cancion_id: 
+      type: integer
+    usuario:
+      type: string
+    ranking:
+      type: string
+addToFavoriteResponse:
+  title: Response addToFavorite
+  type: object
+  properties:
+    data:
+      type: object

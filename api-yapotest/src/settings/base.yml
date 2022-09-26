@@ -1,0 +1,5 @@
+APP:
+  SERVICE_NAME: 'service-example'
+
+  LOGGER:
+    LEVEL: debug
