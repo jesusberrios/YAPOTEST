@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {TracksService} from '../app/services/apple.service'
-import {TrackList} from '../app/models/table.model'
+import {TracksService} from './services/apple.service'
+import {TrackList} from './models/table.model'
 
 @Component({
   selector: 'app-root',

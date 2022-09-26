@@ -6,7 +6,9 @@
     "main": "src/app.js",
     "scripts": {
         "start": "node .",
-        "test": "jest"
+        "test": "jest",
+        "install": "npm install"
+        
     },
     "jest": {
         "testEnvironment": "node",

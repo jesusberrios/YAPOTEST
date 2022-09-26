@@ -6,6 +6,7 @@ npm: 8.15.0,
 node: v16.17.1,
 Angular CLI: 14.2.3,
 KOA: ^2.13.0,
+lerna: "^5.5.2"
 
 ## Clonacion de projecto en el equipo
 
@@ -14,17 +15,16 @@ KOA: ^2.13.0,
 
 ## Instalar Paquetes de Node
 
-Ejecutar `npm i` tanto en el backend como en el frontend para contar con las librerias de node.
+Ejecutar `npm install` en el directorio raiz YAPOTEST.
 
-## Levantar BACKEND
+## Instalar Paquetes de Node en BACKEND Y FRONTEND
 
-cd api-yapotest
-Ejecutar `npm run start` para poder levantar el backend y poder acceder a esta url `http://localhost:3017/api-explorer#`.
+Ejecutar `npm run install` en el directorio raiz YAPOTEST.
 
-## Levantar WEB
+## Levantar BACKEND y FRONTEND
 
-cd test-YapoTest
-Ejecutar `ng serve` para poder levantar la web y poder acceder a esta url `http://localhost:4200/`.
+Ejecutar `npm run start` en el directorio raiz YAPOTEST.
+
 
 ## Realizar test unitarios WEB
 
