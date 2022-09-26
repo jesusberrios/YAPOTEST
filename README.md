@@ -6,24 +6,27 @@ npm: 8.15.0,
 node: v16.17.1,
 Angular CLI: 14.2.3,
 KOA: ^2.13.0,
-lerna: "^5.5.2"
 
 ## Clonacion de projecto en el equipo
 
 `git clone https://github.com/jesusberrios/YAPOTEST.git`
 
 
-## Instalar Paquetes de Node
+## Instalar Paquetes de Node en BACKEND Y FRONT
 
-Ejecutar `npm install` en el directorio raiz YAPOTEST.
+Ejecutar `npm install` en el directorio raiz api-yapotest.
+Ejecutar `npm install` en el directorio raiz test-YapoTest.
 
-## Instalar Paquetes de Node en BACKEND Y FRONTEND
+## URL Backend y Frontend
 
-Ejecutar `npm run install` en el directorio raiz YAPOTEST.
+BACKEND `http://localhost:3017/api-explorer#`
+FRONTEND `http://localhost:4200/`
+
 
 ## Levantar BACKEND y FRONTEND
 
-Ejecutar `npm run start` en el directorio raiz YAPOTEST.
+Ejecutar `npm run start` en el directorio raiz api-yapotest.
+Ejecutar `npm run start` en el directorio raiz test-YapoTest.
 
 
 ## Realizar test unitarios WEB
