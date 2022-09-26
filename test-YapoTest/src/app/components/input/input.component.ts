@@ -19,7 +19,6 @@ export class InputComponent implements OnInit {
   }
 
   search(artistName: string){
-    console.log(artistName)
    this.artistNameOnSearch.emit(artistName)
   }
 

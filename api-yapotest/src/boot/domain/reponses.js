@@ -12,10 +12,24 @@ const SUCCESSFULL_RESPONSE = (data) => {
     }
 }
 
+const FAVORITE_NOT_FOUND_RESPONSE = {
+    data: 'Cancion no encontrada',
+    code: 404,
+    message: 'Error en la busqueda'
+}
+
+const FAVORITE_SUCCESSFULL_RESPONSE = (data) => {
+    return {
+        data,
+        code: 200,
+        message: 'Cancion agregada con exito'
+    }
+}
+
 const INTERNAL_SERVER_ERROR = (error) => {
     return {
         error,
-        message: "error al buscar banda",
+        message: "Error desconocido",
         code: 500
     }
 }
@@ -23,5 +37,7 @@ const INTERNAL_SERVER_ERROR = (error) => {
 module.exports = ({
     INTERNAL_SERVER_ERROR,
     SUCCESSFULL_RESPONSE,
-    BAD_REQUEST_RESPONSE
+    BAD_REQUEST_RESPONSE,
+    FAVORITE_NOT_FOUND_RESPONSE,
+    FAVORITE_SUCCESSFULL_RESPONSE
 })

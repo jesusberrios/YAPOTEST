@@ -1,10 +1,9 @@
-const { BAD_REQUEST_RESPONSE, SUCCESSFULL_RESPONSE, INTERNAL_SERVER_ERROR } = require('../domain/reponses')
+const { BAD_REQUEST_RESPONSE, SUCCESSFULL_RESPONSE, INTERNAL_SERVER_ERROR, FAVORITE_NOT_FOUND_RESPONSE, FAVORITE_SUCCESSFULL_RESPONSE} = require('../domain/reponses')
 
 module.exports = app => {
   app.context.api.yapo = {};
 
   async function searchTrack(request) {
-    console.log(request)
     try {
       if (!request) {
         return BAD_REQUEST_RESPONSE
@@ -18,22 +17,15 @@ module.exports = app => {
 
   async function addToFavorite(request) {
     try {
-      let dataResponse = await app.context.api.repository.addToFavorite(request);
-      console.log(dataResponse)
-      let result = {
-        data: dataResponse,
-        code: 200,
-        message: 'Banda agregada con exito'
+      const dataResponse = await app.context.api.repository.addToFavorite(request);
+      if(dataResponse.length){
+        return FAVORITE_SUCCESSFULL_RESPONSE(dataResponse)
       }
-      return result
+      
+      return FAVORITE_NOT_FOUND_RESPONSE
 
     } catch (e) {
-      result = {
-        error: e,
-        message: "error al agregar banda",
-        code: 402
-      }
-      return result
+      return INTERNAL_SERVER_ERROR(e)
     }
   }
 

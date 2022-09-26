@@ -17,7 +17,10 @@ module.exports = app => {
   }
 
   const addToFavorite = async (data) => {
-    
+    const apiResponse = await axios.get('https://itunes.apple.com/search?term=' + data.nombre_banda)
+    const tracksData = apiResponse.data.results.filter(e => e.trackId == data.cancion_id)
+    return tracksData
+
   }
 
   app.context.api.repository = {
